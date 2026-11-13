@@ -1,0 +1,19 @@
+# Dependencies for THIS capstone only. Each capstone is self-contained.
+#
+# The fairlib pin comes from this folder's frozen constraints.txt, so every
+# capstone builds against the identical framework version. Do not pin fair-llm
+# here directly - the pin lives in ./constraints.txt and is frozen for the term.
+-c constraints.txt
+
+# The framework, with the [local] extra (torch + transformers) that the default
+# HuggingFaceAdapter path needs. The version resolves from constraints.txt above.
+fair-llm[local]
+
+# Load the local .env (fairlib pulls this in transitively, but a capstone that
+# imports it should depend on it directly rather than lean on a transitive pin).
+python-dotenv>=1.0
+
+# --- Add your capstone's own dependencies below this line ---
+# Example: a domain needs PDF parsing, plotting, an HTTP client, etc.
+# pypdf>=5.0
+# httpx>=0.28
