@@ -1,0 +1,10 @@
+# =============================================================================
+# FROZEN fairlib BASELINE - do not change this during the term.
+# =============================================================================
+# Every capstone team builds against the SAME pinned fair_llm version, so
+# findings are comparable across teams and attributable to the framework,
+# not to a moving target. requirements.txt pulls this in via `-c constraints.txt`.
+#
+# Set 2026-08-10: the 0.6.1 PyPI wheel.
+
+fair-llm==0.6.1
