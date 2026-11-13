@@ -1,0 +1,50 @@
+# --- Python byte-compiled / optimized ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Virtual environment ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Secrets and local config ---
+# Real API keys and any settings.yml carrying them never get committed.
+# Commit the *.example.* templates instead.
+.env
+*.env
+!*.env.example
+settings.yml
+!settings.example.yml
+
+# --- Test / coverage / type / lint caches ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# --- Model / RAG artifacts (downloaded weights, built indexes) ---
+*.faiss
+*.index
+chroma/
+.chroma/
+models_cache/
+*.gguf
+*.safetensors
+
+# --- Editors / OS ---
+# launch.json is committed on purpose: it carries the shared "Debug Current
+# File" configuration. Everything else in .vscode/ stays local.
+.vscode/*
+!.vscode/launch.json
+.idea/
+.DS_Store
+
+# --- Logs / scratch ---
+*.log
+outputs/
+scratch/
